@@ -1,0 +1,76 @@
+\firebase authentication
+login and register
+
+\firebase database
+store user details chats and messages
+
+\firebase storage
+upload avatar and chat images
+
+\css
+https://ithelp.ithome.com.tw/articles/10252827
+https://developer.mozilla.org/en-US/docs/Web/CSS/scroll-snap-type
+https://developer.mozilla.org/en-US/docs/Web/CSS/scroll-snap-align
+https://developer.mozilla.org/zh-CN/docs/Web/CSS/counter-reset
+https://developer.mozilla.org/en-US/docs/Web/CSS/counter-increment
+https://www.w3schools.com/cssref/css3_pr_order.php
+https://developer.mozilla.org/en-US/docs/Web/CSS/backdrop-filter
+
+\search bar
+    <div className="chatList">
+      <div className="search">
+        <div cl     assName="searchBar">
+          <img src="/search.png" alt="" />
+          <input type="text" placeholder="Search" />
+        </div>
+        <img src="./plus.png" alt="" />
+      </div>
+    </div>
+
+\icon變化
+const [addMode, setAddMode] = useState(false);
+
+<img
+  src={addMode ? "./minus.png" : "./plus.png"}
+  onClick = {() => setAddMode ((prev) => !prev)}
+/>
+
+\emoji picker
+npm i emoji-picker-react
+import EmojiPicker from "emoji-picker-react";
+
+const [open, setOpen] = useState(false)
+const [text, setText] = useState("")
+
+
+const handleEmoji = e => {
+  setText((prev) => prev + e.emoji);
+  setOpen(false)
+}
+
+<input 
+  type="text"
+  placeholder="Type a message" 
+  onChange={e=>setText(e.target.value)} 
+  value={text}
+/>
+
+<img src="./emoji.png" onClick={()=>setOpen(prev => !prev)}></img>
+<EmojiPicker open={open} onEmojiClick={handleEmoji}/>
+
+
+\js
+https://developer.mozilla.org/zh-CN/docs/Web/API/Element/scrollIntoView
+
+\label取代input
+    <label htmlFor="file">Upload an image</label>
+    <input type="file" id="file" style={{display:"none"}}/>
+
+\api
+npm i react-toastify
+
+\+-展開
+{addMode && <AddUser/>}
+
+\時間
+https://youtu.be/domt_Sx-wTY?t=5027
